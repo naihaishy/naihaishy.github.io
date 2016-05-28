@@ -1,0 +1,59 @@
+.body404{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:#fff url(img/404.jpg)no-repeat center top;
+    background-size: cover;
+}
+.site-name404 {
+    margin: 0 auto;
+    width: 3em;
+    text-align: center;
+    letter-spacing: 2px;
+    font:700 88px/1.2 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+}
+.title404 span{
+    font-size: 15px;
+    width: 2px;
+}
+.site-name404 i {
+    font-style: normal;
+}
+.title404 p{
+    font-size: 20px;
+    margin: 0.5em 0 .6em;
+}
+.info404{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    margin-top: -160px;
+}
+#footer404{
+    margin-top:30px;
+}
+.index404{
+    margin-top: 13px;
+    display: inline-block;
+    padding: 14px 27px 14px 29px;
+    color: #fff;
+    white-space: nowrap;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    background: #444;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.index404:hover{
+    background-color: #000;
+    color: #fff;
+}
