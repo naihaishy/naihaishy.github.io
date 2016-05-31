@@ -84,46 +84,40 @@
 
 
 
-<meta name="description" content="背景：SAE安装WordPress 开启多站点 配置config.yaml文件情况：
+<meta name="description" content="背景：
+SAE安装WordPress 开启多站点 配置config.yaml文件情况：
 
 根目录下安装WordPress 开启多站点2.子目录下安装WordPress 开启多站点
 
 适合人群：新手
 情况1：
 根目录下安装WordPress 开启多站点config.yaml文件配置
-name: zhfskysss
-version: 3
-handle:
-– rewrite:   if (path ~ “">
+123456789name: zhfskysssversion: 3handle:– rewrite:   if (p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SAE下安装WordPress 多站点">
 <meta property="og:url" content="http://naihaishy.github.io/2016/05/31/wordpress-multisites-on-sae/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="背景：SAE安装WordPress 开启多站点 配置config.yaml文件情况：
+<meta property="og:description" content="背景：
+SAE安装WordPress 开启多站点 配置config.yaml文件情况：
 
 根目录下安装WordPress 开启多站点2.子目录下安装WordPress 开启多站点
 
 适合人群：新手
 情况1：
 根目录下安装WordPress 开启多站点config.yaml文件配置
-name: zhfskysss
-version: 3
-handle:
-– rewrite:   if (path ~ “">
-<meta property="og:updated_time" content="2016-05-31T06:14:09.035Z">
+123456789name: zhfskysssversion: 3handle:– rewrite:   if (p">
+<meta property="og:updated_time" content="2016-05-31T13:42:15.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SAE下安装WordPress 多站点">
-<meta name="twitter:description" content="背景：SAE安装WordPress 开启多站点 配置config.yaml文件情况：
+<meta name="twitter:description" content="背景：
+SAE安装WordPress 开启多站点 配置config.yaml文件情况：
 
 根目录下安装WordPress 开启多站点2.子目录下安装WordPress 开启多站点
 
 适合人群：新手
 情况1：
 根目录下安装WordPress 开启多站点config.yaml文件配置
-name: zhfskysss
-version: 3
-handle:
-– rewrite:   if (path ~ “">
+123456789name: zhfskysssversion: 3handle:– rewrite:   if (p">
 
 
 
@@ -368,40 +362,31 @@ handle:
       
 
       
-        <p>背景：<br>SAE安装WordPress 开启多站点 配置config.yaml文件<br>情况：</p>
+        <p>背景：</p>
+<p>SAE安装WordPress 开启多站点 配置config.yaml文件<br>情况：</p>
 <ol>
 <li>根目录下安装WordPress 开启多站点<br>2.子目录下安装WordPress 开启多站点</li>
 </ol>
 <p>适合人群：新手</p>
 <p>情况1：</p>
 <p>根目录下安装WordPress 开启多站点<br>config.yaml文件配置</p>
-<p><code>name: zhfskysss
-version: 3
-handle:
-– rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “wp-includes/ms-files.php?file=$2”
-– rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “$1wp-admin/”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “$1”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/[_0-9a-zA-Z-]+/(.*.php)$”) goto “$1”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/.”) goto “index.php”</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name: zhfskysss</span><br><span class="line">version: 3</span><br><span class="line">handle:</span><br><span class="line">– rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “wp-includes/ms-files.php?file=$2”</span><br><span class="line">– rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “$1wp-admin/”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/[_0-9a-zA-Z-]+/(.*.php)$”) goto “$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/.”) goto “index.php”</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>通用 这样更改name 和version即可</p>
 <p>情况2：</p>
 <p>子目录下安装WordPress 开启多站点<br>config.yaml文件配置<br>举例： 在子目录文件夹 a里面放着WordPress代码 安装WordPress<br>实现多站点<br>例如我的<br>www.zhfsky.com/a 主站点<br>www.zhfsky.com/a/aaa 子站点1<br>www.zhfsky.com/a/bbb 子站点2<br>www.zhfsky.com/a/ccc  子站点3<br>等<br>配置如下</p>
-<p>name: zhfskysss<br>version: 3<br>handle:</p>
-<p><code>– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%{QUERY_STRING}”
-– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”
-– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “a/$1wp-admin/”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “a/$1”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(.*.php)$”) goto “a/$1”
-– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/.”) goto “a/index.php”</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name: zhfskysss</span><br><span class="line">version: 3</span><br><span class="line">handle:</span><br><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “a/$1wp-admin/”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(.*.php)$”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/.”) goto “a/index.php”</span><br></pre></td></tr></table></figure>
 <p>这与前面的区别就是 增加了一句</p>
-<p><code>– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%{QUERY_STRING}”</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br></pre></td></tr></table></figure>
 <p>下面的path中 增加到/a/目录下以及goto 即可</p>
-<p>例如根目录时是<br>    – rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “wp-includes/ms-files.php?file=$2”<br>那么对于子目录a时 就是</p>
-<pre><code>– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”
-</code></pre><p>那么其实新增加的第一句也可以作为子目录绑定子域名使用</p>
-<pre><code>– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%{QUERY_STRING}”
-</code></pre><p>这一句适合将子目录中的战点绑定域名</p>
-<p>例如将 子目录a下的站点绑定 a.zhfsky.com  可类似进行书写<br>如下<br>    – rewrite:   if (  in_header[“host”] ~ “<a href="http://a.zhfsky.com”" target="_blank" rel="external">http://a.zhfsky.com”</a> &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%{QUERY_STRING}”</p>
+<p>例如根目录时是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (path ~ “^/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “wp-includes/ms-files.php?file=$2”</span><br></pre></td></tr></table></figure>
+<p>那么对于子目录a时 就是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”</span><br></pre></td></tr></table></figure>
+<p>那么其实新增加的第一句也可以作为子目录绑定子域名使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br></pre></td></tr></table></figure>
+<p>这一句适合将子目录中的战点绑定域名</p>
+<p>例如将 子目录a下的站点绑定 a.zhfsky.com  可类似进行书写<br>如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://a.zhfsky.com” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br></pre></td></tr></table></figure>
 <p>就是这些</p>
 <p>强调一下 适合人群 ：新手</p>
 <p>多谢  By Naihai</p>
