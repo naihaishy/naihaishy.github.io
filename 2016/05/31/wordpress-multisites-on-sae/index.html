@@ -106,7 +106,7 @@ SAE安装WordPress 开启多站点 配置config.yaml文件情况：
 情况1：
 根目录下安装WordPress 开启多站点config.yaml文件配置
 12345678name: zhfskysssversion: 3handle:– rewrite:   if (pa">
-<meta property="og:updated_time" content="2016-06-01T02:21:33.958Z">
+<meta property="og:updated_time" content="2016-06-01T02:28:13.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SAE下安装WordPress 多站点">
 <meta name="twitter:description" content="背景：
@@ -374,7 +374,7 @@ SAE安装WordPress 开启多站点 配置config.yaml文件情况：
 <p>通用 这样更改name 和version即可</p>
 <p>情况2：</p>
 <p>子目录下安装WordPress 开启多站点<br>config.yaml文件配置<br>举例： 在子目录文件夹 a里面放着WordPress代码 安装WordPress<br>实现多站点<br>例如我的<br>www.zhfsky.com/a 主站点<br>www.zhfsky.com/a/aaa 子站点1<br>www.zhfsky.com/a/bbb 子站点2<br>www.zhfsky.com/a/ccc  子站点3<br>等<br>配置如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name: zhfskysss</span><br><span class="line">version: 3</span><br><span class="line">handle:</span><br><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “a/$1wp-admin/”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(.*.php)$”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/.”) goto “a/index.php”</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name: zhfskysss</span><br><span class="line">version: 3</span><br><span class="line">handle:</span><br><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?files/(.+)”) goto “a/wp-includes/ms-files.php?file=$2”</span><br><span class="line">– rewrite:   if (path ~ “^/a/([_0-9a-zA-Z-]+/)?wp-admin$”) goto “a/$1wp-admin/”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*)”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/[_0-9a-zA-Z-]+/(.*.php)$”) goto “a/$1”</span><br><span class="line">– rewrite:   if (!is_file() &amp;&amp; !is_dir() &amp;&amp; path ~ “^/a/.”) goto “a/index.php”</span><br></pre></td></tr></table></figure>
 <p>这与前面的区别就是 增加了一句</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">– rewrite:   if (  in_header[“host”] ~ “http://www.zhfsky.com/a” &amp;&amp; path ~ “^(?!a/)(.*)” ) goto “a/$1?%&#123;QUERY_STRING&#125;”</span><br></pre></td></tr></table></figure>
 <p>下面的path中 增加到/a/目录下以及goto 即可</p>
@@ -421,6 +421,10 @@ SAE安装WordPress 开启多站点 配置config.yaml文件情况：
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/06/雨燕/" rel="prev" title="雨燕">
+                雨燕 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -492,7 +496,7 @@ SAE安装WordPress 开启多站点 配置config.yaml文件情况：
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
